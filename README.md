@@ -47,6 +47,13 @@ mise exec -- ./gradlew createDistributable          # app image (no extra tools)
 mise exec -- ./gradlew packageDistributionForCurrentOS   # .msi / .dmg / .deb
 ```
 
+## CI and releases
+
+Pull requests and pushes to `main` are checked and built with GitHub Actions.
+Tagged releases (`v*`) build `.deb`, `.dmg`, and `.msi` installers, retain them
+as workflow artifacts, and publish them to the matching GitHub Release. The
+packaging workflow can also be run manually without creating a release.
+
 ## Project layout
 
 ```
